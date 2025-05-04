@@ -1,0 +1,24 @@
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+}

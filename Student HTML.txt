@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h2>Login Portal</h2>
+  <div id="loginSelection">
+    <button onclick="showTeacherLogin()">Teacher Login</button>
+    <button onclick="showStudentLogin()">Student Login</button>
+  </div>
+
+  <div id="teacherLogin" class="hidden">
+    <h3>Teacher Login</h3>
+    <label>Username:</label> <input type="text" id="teacherUsername">
+    <label>Password:</label> <input type="password" id="teacherPassword">
+    <button onclick="loginTeacher()">Login</button>
+  </div>
+
+  <div id="studentLogin" class="hidden">
+    <h3>Student Login</h3>
+    <label>USN:</label> <input type="text" id="studentUSN">
+    <label>Password:</label> <input type="password" id="studentPassword">
+    <button onclick="loginStudent()">Login</button>
+  </div>
+
+  <div id="teacherDashboard" class="hidden">
+    <h3>Add Student Details</h3>
+    <label>Student ID (USN):</label> <input type="text" id="usn">
+    <label>Name:</label> <input type="text" id="name">
+    <label>Classes Taken:</label> <input type="number" id="totalClasses">
+    <label>Classes Present:</label> <input type="number" id="presentClasses">
+
+    <h3>Marks Entry</h3>
+    <label>Hi:</label> <input type="number" id="hi">
+    <label>Hu:</label> <input type="number" id="hu">
+    <label>Me:</label> <input type="number" id="me">
+    <label>Mu:</label> <input type="number" id="mu">
+    <label>Jj:</label> <input type="number" id="jj">
+    <button onclick="addStudent()">Add Student</button>
+
+    <h3>Student Records</h3>
+    <table id="studentTable">
+      <tr>
+        <th>USN</th>
+        <th>Name</th>
+        <th>Attendance (%)</th>
+        <th>Backlogs</th>
+        <th>Action</th>
+      </tr>
+    </table>
+
+    <h3>Attendance Graph</h3>
+    <canvas id="attendanceChart" width="400" height="200"></canvas>
+  </div>
+
+  <div id="studentDashboard" class="hidden">
+    <h3>Student Details</h3>
+    <p id="studentInfo"></p>
+    <h3>Attendance Graph</h3>
+    <canvas id="studentAttendanceChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
